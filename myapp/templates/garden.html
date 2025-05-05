@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden & Libraries | Sunrise Inn B&B</title>
+
+    
+    <link href="{% static 'assets/images/logo_sunriseinn.png' %}" rel="icon">
+    <link rel="stylesheet" href="{% static 'assets/css/gardenpage.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/navbar1.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="{% static 'assets/js/garden.js' %}" defer></script>
+    <script src="{% static 'assets/js/navbar.js' %}" defer></script>
+
+    <style>
+        .hero {
+            background-image: url('{% static 'assets/images/garden.jpeg' %}');
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+          <li><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+          <li><a href="{%url 'SERVIZI'%}">servizi</a></li>
+          <li><a href="{%url 'GARDEN'%}">Garden</a></li>
+          <li><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+    
+    
+        </ul>
+        <ul>
+          <li><a href="#"><img src="{%static 'assets/images/logo_sunriseinn.png'%}" class="logo"></a></li>
+          <li class="hideOnMobile"><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+          <li class="hideOnMobile"><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+          <li class="hideOnMobile"><a href="{%url 'GARDEN'%}">Garden</a></li>
+    
+          <li class="hideOnMobile"><a href="{%url 'SERVIZI'%}">servizi</a></li>
+          <li class="hideOnMobile"><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+    
+          <li class="menu-button" onclick="showSidebar()">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="36" width="36" viewBox="0 96 960 960" width="26">
+                    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                </svg>
+            </a>
+        </li>
+            </ul>
+      </nav>
+
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Benvenuti nel Nostro Splendido Giardino</h1>
+      <p>Scopri la tranquillità nel nostro giardino sereno e negli accoglienti spazi della biblioteca.</p>
+      <a href="#library" class="cta-button">Scopri di più</a>
+    </div>
+</header>
+
+<section class="garden-facts">
+    <div class="container">
+      <h2>Curiosità sul Giardino</h2>
+      <p id="fact">I giardini sono stati coltivati per più di 4000 anni!</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const facts = [
+    "I giardini sono stati coltivati per più di 4000 anni!",
+    "Passeggiare in giardino riduce lo stress e migliora l'umore.",
+    "Un solo albero adulto può produrre ossigeno per due persone!",
+    "La lavanda è una delle piante più coltivate nei giardini mediterranei.",
+    "Le api sono essenziali per l'impollinazione di molti fiori da giardino."
+  ];
+
+  let currentFact = 0;
+  const factElement = document.getElementById('fact');
+
+  function changeFact() {
+    currentFact = (currentFact + 1) % facts.length;
+    factElement.style.opacity = 0;
+    setTimeout(() => {
+      factElement.textContent = facts[currentFact];
+      factElement.style.opacity = 1;
+    }, 500);
+  }
+
+  setInterval(changeFact, 3000); // Change fact every 5 seconds
+});
+
+  </script>
+
+  <section class="garden-services" id="library">
+    <div class="container">
+      <h2>I Nostri Servizi nel Giardino</h2>
+      <p>Scopri i vari servizi offerti nel nostro giardino incantevole, dove ogni angolo è progettato per offrirti un'esperienza unica e rilassante:</p>
+      <div class="service-grid">
+        <div class="service-item">
+          <div class="slider">
+            <div class="slide">
+              <img src="{% static 'assets/images/garden.jpeg' %}" alt="Flower Garden">
+            </div>
+            <div class="slide">
+              <img src="{% static 'assets/images/homepage2.jpg' %}" alt="Flower Garden">
+            </div>
+          </div>
+          <h3>Giardino Silenzioso</h3>
+          <p>Rilassati nel nostro Giardino Silenzioso, un'area tranquilla e serena dove puoi meditare e ritrovare la pace interiore.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="slider">
+            <div class="slide">
+              <img src="{% static 'assets/images/library3.jpeg' %}" alt="Library">
+            </div>
+            <div class="slide">
+              <img src="{% static 'assets/images/book.jpeg' %}" alt="Library">
+            </div>
+          </div>
+          <h3>Natura e Alberi</h3>
+          <p>Esplora la bellezza della natura con i nostri alberi secolari e i paesaggi rigogliosi che adornano il nostro giardino.</p>
+        </div>
+
+        <div class="service-item">
+          <div class="slider">
+            <div class="slide">
+              <img src="{% static 'assets/images/library.jpeg' %}" alt="Library">
+            </div>
+            <div class="slide">
+              <img src="{% static 'assets/images/library.jpg' %}" alt="Library">
+            </div>
+          </div>
+          <h3>Collezione Estesa di Biblioteche</h3>
+          <p>Abbiamo molte biblioteche dove puoi trovare una vasta gamma di libri che rappresentano diverse culture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sliders = document.querySelectorAll('.slider');
+
+      sliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showNextSlide() {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }
+
+        slides[currentSlide].classList.add('active');
+        setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+      });
+    });
+  </script>
+
+
+
+
+<footer>
+    <div class="footer">
+        <div class="content-footer">
+            <div class="logo-section">
+                <h1>Sunrise Inn B&B</h1>
+            </div>
+            <div class="address-section" style="color: white;">
+                <p>Torino . LANZO Frazione Gisola 27/C . 10070 Pessinetto (TO)</p>
+                <p style="color: white;">Tel : 39 331 126 8529</p>
+                <p style="margin-top: 1px;">gmail : info@sunriseinn.it</p>
+                <a href="{% url 'HOMEPAGE' %}">
+                    <img src="{% static 'assets/images/logo_sunriseinn.png' %}" class='logo-footer' alt="Sunrise Inn Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="content-footer">
+            <div class="logo-section">
+                <h1>FOLLOW US ON SOCIAL MEDIA</h1>
+            </div>
+            <div>
+                <p style="color: rgb(255, 255, 255); margin-bottom: 10px;">
+                    Seguici sui social media per scoprire le nuove offerte e trovare ulteriori informazioni:
+                </p>
+            </div>
+            <div class="icons-socialmedia">
+                <a href="https://www.instagram.com/sunriseinnhotel/">Instagram</a>
+                <a href="https://www.facebook.com/sunriseinnhotel">Facebook</a>
+            </div>
+            <div class="footer-links">
+                <a href="#contact">Contact Us</a> |
+                <a href="{%url 'SERVIZI' %}">About Us</a> |
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="content-footer">
+            <div class="logo-section">
+                <h1>Iscrivetevi</h1>
+            </div>
+            <div class="newsletter-form">
+                <p>ISCRIVITI PER OFFERTE SPECIALI</p>
+                <form class="form" method="post">
+                    {% csrf_token %}
+                    <label style='margin-top: 15px;' for="email">Email:</label>
+                    <input required placeholder="Enter your email address" name="email" id="email" type="email">
+                    <input value="Iscrivetevi" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Informativa sulla Privacy</h2>
+            <p>
+                Per avere informazioni circa i tuoi dati personali raccolti, le finalità ed i soggetti con cui i dati vengono condivisi, contatta il Titolare.</p>
+        </div>
+    </div>
+
+
+
+        <div id="contact-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Contact Us</h2>
+                <p>Phone: +39 331 126 8529</p>
+                <p>Email: info@sunriseinn.it</p>
+            </div>
+        </div>
+    </footer>
+    
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+var modal = document.getElementById("privacy-modal");
+
+var privacyLink = document.querySelector('a[href="#privacy"]');
+
+var span = document.getElementsByClassName("close")[0];
+
+privacyLink.onclick = function() {
+    modal.style.display = "block";
+    return false; 
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+});
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+var privacyModal = document.getElementById("privacy-modal");
+var contactModal = document.getElementById("contact-modal");
+
+var privacyLink = document.querySelector('a[href="#privacy"]');
+var contactLink = document.querySelector('a[href="#contact"]');
+
+var closeButtons = document.getElementsByClassName("close");
+
+privacyLink.onclick = function() {
+    privacyModal.style.display = "block";
+    return false; 
+}
+
+contactLink.onclick = function() {
+    contactModal.style.display = "block";
+    return false;  
+}
+
+for (var i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].onclick = function() {
+        privacyModal.style.display = "none";
+        contactModal.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    if (event.target == privacyModal || event.target == contactModal) {
+        privacyModal.style.display = "none";
+        contactModal.style.display = "none";
+    }
+}
+});
+
+
+
+</script>
+</body>
+</html>

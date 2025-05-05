@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LA RUSTICA  | Sunrise Inn B&B</title>
+
+    <link href="{%static 'assets/images/logo_sunriseinn.png'%}" rel="icon">
+    
+    <link rel="stylesheet" href="{%static 'assets/css/rooms.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/navbar1.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/footer.css'%}">
+
+
+    <script src="{% static 'assets/js/navbar.js' %}?{% now 'U' %}" defer></script>
+
+
+
+</head>
+<body>
+
+    <nav style="background-color: rgb(91, 38, 0);">
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+            <li><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+            <li><a href="{% url 'LOCALLI' %}">Escursioni</a></li>
+            <li><a href="{% url 'SERVIZI' %}">Servizi</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><img src="{% static 'assets/images/logo_sunriseinn.png' %}" class="logo"></a></li>
+            <li class="hideOnMobile"><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+            <li class="hideOnMobile"><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+            <li class="hideOnMobile"><a href="{% url 'LOCALLI' %}">Escursioni</a></li>
+            <li class="hideOnMobile"><a href="{% url 'SERVIZI' %}">Servizi</a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="36" width="36" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="section1" >
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="image">
+                <img src="{% static 'assets/images/homepage.jpg' %}" alt="Luxury Jacuzzi with panoramic view at Sunrise inn">
+            </div>
+            <div class="paragraph">
+                <h1>LA RUSTICA</h1>
+                <p>Scopri La Rustica, un appartamento incantevole in legno che unisce eleganza e comfort. Goditi l'atmosfera calda e accogliente e rilassati nella jacuzzi esterna inclusa. Un soggiorno unico che celebra il fascino rustico e la bellezza naturale.</p>
+                <h3 style="margin-top: 30px;color: gray;">
+
+                    Spazio di lavoro / lettura dedicato
+                    </h3>
+                    <p style="margin-top: 20px;">Troverete uno spazio di lavoro / lettura dotato di una spaziosa scrivania, una sedia ergonomica e prese elettriche convenientemente posizionate per caricare dispositivi elettronici come laptop, telefoni cellulari o tablet.
+
+                        Inoltre, è possibile usufruire, gratuitamente, di una connessione internet ad alta velocità e senza interruzioni</p>
+
+                        <h4 style="margin-top: 30px;margin-bottom: 10px;">
+
+                            Scheda Camera
+                            </h4>
+                            <ul>
+                                <li>Macchinetta caffè Nespresso</li>
+                                <li>Bollitore (Tisane..)</li>
+                                <li>Sanificatore Aria</li>
+                                <li>2 TV</li>
+                                <li>1 Letto matrimoniale</li>
+                                <li>Rilevatore fumo</li>
+                                <li>Stufa pellet</li>
+                                <li>Caminetto elettrico</li>
+                                <li>Bagno (piatto doccia)</li>
+                                <li>Bidet</li>
+                            </ul>
+
+                            <h4 style="margin-top: 30px;margin-bottom: 10px;">Orare</h4>
+                            <ul>
+                                <li>Colazione: fino alle 10:00</li>
+                                <li>Check-in: dopo le 15:00</li>
+                                <li>Check-out: entro le 10:30</li>
+                            </ul>
+
+                            <h4 style="margin-top: 30px;margin-bottom: 10px;">Regole</h4>
+                            <ul>
+                                <li>Vietato fumare in camera</li>
+                                <li>Cani di piccola taglia ammessi</li>
+                            </ul>
+                            
+                            <div class="price"><h3 style="color: gray;">TOTAL : <h1 style="font-size: 25px; font-weight: bold;">106,00 €</h1></h3>                                <button> BOOK NOW</button></a>
+                            </div>
+                            <a style="margin-top: 40px;">
+
+                            
+                            
+            </div>
+        </div>
+    </section>
+        
+      
+
+
+        <footer>
+            <div class="footer">
+                <div class="content-footer">
+                    <div class="logo-section">
+                        <h1>Sunrise Inn B&B</h1>
+                    </div>
+                    <div class="address-section" style="color: white;">
+                        <p>Torino . LANZO Frazione Gisola 27/C . 10070 Pessinetto (TO)</p>
+                        <p>Tel : +39 331 126 8529</p>
+                        <p style="margin-top: 1px;">gmail : info@sunriseinn.it</p>
+                        <a href="{% url 'HOMEPAGE' %}">
+                            <img src="{% static 'assets/images/logo_sunriseinn.png' %}" class='logo-footer' alt="Sunrise Inn Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer">
+                <div class="content-footer">
+                    <div class="logo-section">
+                        <h1>FOLLOW US ON SOCIAL MEDIA</h1>
+                    </div>
+                    <div>
+                        <p style="color: rgb(255, 255, 255); margin-bottom: 10px;">
+                            Seguici sui social media per scoprire le nuove offerte e trovare ulteriori informazioni:
+                        </p>
+                    </div>
+                    <div class="icons-socialmedia">
+                        <a href="https://www.instagram.com/sunriseinnhotel/">Instagram</a>
+                        <a href="https://www.facebook.com/sunriseinnhotel">Facebook</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#contact">Contact Us</a> |
+                        <a href="{%url 'SERVIZI' %}">About Us</a> |
+                        <a href="#privacy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer">
+                <div class="content-footer">
+                    <div class="logo-section">
+                        <h1>Iscrivetevi</h1>
+                    </div>
+                    <div class="newsletter-form">
+                        <p>ISCRIVITI PER OFFERTE SPECIALI</p>
+                        <form class="form" method="post">
+                            {% csrf_token %}
+                            <label style='margin-top: 15px;' for="email">Email:</label>
+                            <input required placeholder="Enter your email address" name="email" id="email" type="email">
+                            <input value="Iscrivetevi" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Privacy Policy Modal -->
+            <div id="privacy-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Informativa sulla Privacy</h2>
+                    <p>
+                        Per avere informazioni circa i tuoi dati personali raccolti, le finalità ed i soggetti con cui i dati vengono condivisi, contatta il Titolare.</p>
+                </div>
+            </div>
+    
+    
+    
+                <div id="contact-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Contact Us</h2>
+                        <p>Phone: +39 331 126 8529</p>
+                        <p>Email: info@sunriseinn.it</p>
+                    </div>
+                </div>
+            </footer>
+            
+        
+        
+
+</body>
+</html>

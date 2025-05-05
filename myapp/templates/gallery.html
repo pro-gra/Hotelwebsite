@@ -1,0 +1,162 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filterable responsive lightbox gallery tutorial</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="{%static 'assets/css/gallerie.css'%}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.map"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.js" integrity="sha512-docBEeq28CCaXCXN7cINkyQs0pRszdQsVBFWUd+pLNlEk3LDlSDDtN7i1H+nTB8tshJPQHS0yu0GW9YGFd/CRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj+KsslFkCOt3TvJrX2AV/Gc3wOqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.map"></script>
+
+
+
+
+    <!-- custom css file link  -->
+
+</head>
+<body>
+    <div class="gallery-title">
+        <h1>Discover Our Stunning Gallery</h1>
+      </div>
+      
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="servizi">servizi</li>
+        <li class="buttons" data-filter="rooms">rooms</li>
+
+    </ul>
+
+    <div class="image-container">
+
+        <a href="{%static 'assets/images/image-about.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/image-about.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images/vue_jacouzzi.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/vue_jacouzzi.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images-rooms/room1.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room1.jpg'%}">        
+        </a>
+
+        <a href="{%static 'assets/images-rooms/room2.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room2.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images/biliardo.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/biliardo.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images/cinema.png'%}" class="image servizi">
+            <img src="{%static 'assets/images/cinema.png'%}">        
+        </a>
+        <a href="{%static 'assets/images/homepage.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images/homepage.JPG'%}">        
+        </a>
+        <a href="{%static 'assets/images-rooms/room3.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room3.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images/fitnesssala.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/fitnesssala.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images/imagejardin.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/imagejardin.jpg'%}">        
+        </a>
+
+        <a href="{%static 'assets/images/spa.png'%}" class="image servizi">
+            <img src="{%static 'assets/images/spa.png'%}">        
+        </a>
+        <a href="{%static 'assets/images/ecars.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/ecars.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images/cinema2.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/cinema2.jpg'%}">        
+        </a>
+
+        <a href="{%static 'assets/images/library.jpg'%}" class="image servizi">
+            <img src="{%static 'assets/images/library.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images-rooms/room4.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room4.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images-rooms/room7.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room7.jpg'%}">        
+        </a>
+        <a href="{%static 'assets/images-rooms/room6.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room6.jpg'%}">        
+        </a>
+
+        <a href="{%static 'assets/images-rooms/room5.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room5.jpg'%}">        
+        </a>
+
+        <a href="{%static 'assets/images-rooms/room8.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room8.jpg'%}">        
+        </a>
+
+        <a href="{%static 'assets/images-rooms/room9.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room9.jpg'%}">        
+        </a>
+
+        <a href="{%static 'assets/images-rooms/room10.jpg'%}" class="image rooms">
+            <img src="{%static 'assets/images-rooms/room10.jpg'%}">        
+        </a>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+    
+</body>
+</html>

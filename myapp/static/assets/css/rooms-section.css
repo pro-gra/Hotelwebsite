@@ -1,0 +1,80 @@
+.scroll-trail::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.scroll-trail::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #b90000;
+}
+
+.gallery-container * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: scroll;
+    padding: 24px;
+    width: 100%; /* Use full width */
+    scroll-snap-type: x mandatory;
+    height: 600px;
+    scroll-padding-top: 24px;
+    border-radius: 8px;
+    gap: 20px;
+    margin-left: 25px;
+}
+
+.gallery-container .gallery-item {
+    flex: 0 0 calc(100% - 50px); /* Show full item with a bit of the next */
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #0000008f;
+    scroll-snap-align: start;
+}
+
+.gallery-item .image-section {
+    height: 100%;
+}
+
+.gallery-item .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item .title-text {
+    font-size: 32px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 70%;
+}
+
+.gallery-item .description-text {
+    color: #fff;
+    font-size: 16px;
+    
+}
+
+.content-section{
+    height: 100%;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    .gallery-container .gallery-item {
+        flex: 0 0 calc(33.333% - 40px); /* Three items, minus gap */
+    }
+}
+
+
+    @media screen and (max-width: 900px){
+        .gallery-item .title-text {
+            margin-top: 350px;
+        }
+
+    }

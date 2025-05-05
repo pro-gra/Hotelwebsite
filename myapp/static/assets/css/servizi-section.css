@@ -1,0 +1,78 @@
+.servizi {
+    height: 600px;
+    width: 100%;
+    background-color: #d9cbb9;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servizi-box {
+    height: 100%;
+    width: 600px;
+    background-color: rgb(99, 30, 0);
+    padding: 60px 40px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-item i {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-container .fa {
+    color: rgb(255, 255, 255);
+}
+
+.icon-item i:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+
+.icon-text {
+    color: rgb(255, 243, 243);
+    font-size: 20px;
+    font-family:Poppins;
+}
+
+.icon-text:hover {
+    color: #ff9800;
+}
+
+@media (max-width: 600px) {
+    .servizi-box {
+        flex-direction: column;
+        align-items: center;
+        width: 700px;
+        padding: 40px 10px 10px 20px;
+        gap: 10px;
+        margin-right: 0;
+    }
+
+    .icon-item i {
+        font-size: 18px;
+    }
+
+    .icon-text {
+        font-size: 18px;
+    }
+}

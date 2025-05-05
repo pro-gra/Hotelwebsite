@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+
+html,body{
+  padding: 0;
+  margin: 0;
+  overflow-x:hidden;
+  text-decoration: none;
+}
+
+
+.title-center{
+    height: 100px;
+    width: 100%;
+    display: flex;
+
+
+    justify-content: center; 
+
+}
+  .explain{
+    height: 700px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    
+
+  }
+
+
+  .title2 {
+    display: flex;
+    justify-content: center;    
+    height: 30px;  
+    width: 40%;
+    padding: 20px;
+    margin-bottom: 1000px;
+  }
+
+  .title2 h1::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 2px; 
+    background-color: #000; 
+    bottom: -10px; 
+    left: 0;
+  }
+  
+
+
+
+.container2{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    height: 90%;
+    width:100%;
+}
+
+.photo{
+    height: 100%;
+    width: 30%;
+
+}
+
+.paragraph2{
+    height: 90%;
+    width: 80%;
+    padding: 0 15px;
+padding-top: 100px;
+padding-right: 100px;
+padding-left: 100px;
+}
+
+.paragraph2 p{
+    font-size: 23px;
+    color: rgb(119, 119, 119);
+    font-family:'Roboto';
+    
+}
+
+.photo img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-bottom: 80px;
+    margin-bottom: 50px;
+
+}
+
+
+.title2 h1{
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+
+    font-weight: 700;
+    font-family: "Cormorant Garamond", serif;
+
+
+
+}
+  
+
+
+
+
+  
+@media (max-width: 900px) {
+
+
+  .title-center{
+
+    margin-bottom: 100px;
+
+
+}
+  .container2{
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;   
+     margin-right: 10px;
+
+
+    
+  }
+
+  .paragraph2{
+    padding-top: 20px;
+    padding: 60px;
+    margin-bottom: 10px;
+  }
+
+  .explain{
+    height: 1500px;
+    
+
+  }
+
+  .photo{
+    height: 500px;                           
+    width: 80%;
+    padding-right: 30px;
+                                                              
+    justify-content: center;
+    align-items: center;
+             
+}                                                                                                                                                                                  
+                                                                            
+           
+}     
+
+
+
+.parallex::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.373);
+  z-index: 1;
+}
+
+.parallax {
+
+
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+.parallax-background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.parallax-content {
+  position: relative;
+  margin-top: 100px;
+  z-index: 1;
+  text-align: center;
+  align-items: center;
+  color: white;
+  height: 50px;
+  padding: 150px 20px;
+}
+
+
+
+.parallax-content h2{
+  font-size: 4rem; 
+  font-weight: 400; 
+  font-family: 'Georgia', serif; 
+  color: #ffffff; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  z-index: 1; 
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+
+}
+
+.parallax-content p{
+  font-weight: 400;
+
+  font-size: 20px;
+  font-family: Poppins;
+}
+                                                                    
+@media (max-width: 900px) {
+  .parallax-background {
+      background-attachment: scroll;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .parallax-content h2{
+    font-size: 3rem; 
+
+  }
+}
+
+.interactive-map {
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+.interactive-map h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+
+  margin-bottom: 50px;
+}
+
+
+.parallax::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.373);
+    z-index: 1;
+
+}

@@ -1,0 +1,217 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins, sans-serif; /* Apply Poppins to the entire body */
+}
+
+.main-container {
+    flex: 1;
+}
+
+footer {
+    padding: 40px;
+    background-color: rgb(102, 30, 1);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.content-footer {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.logo-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-section h1 {
+    margin: 15px 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.adress-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adress-section p {
+    color: white;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.logo-footer {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none; /* Remove text decoration */
+    font-family: Poppins, sans-serif; /* Apply Poppins font */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover, if needed */
+}
+
+.newsletter-form {
+    max-width: 100%;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.newsletter-form h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+    font-family: Poppins, sans-serif; /* Apply Poppins font */
+}
+
+.newsletter-form label {
+    display: block;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+    font-family: Poppins, sans-serif; /* Apply Poppins font */
+}
+
+.newsletter-form input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Poppins, sans-serif; /* Apply Poppins font */
+}
+
+.newsletter-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000000;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Poppins, sans-serif; /* Apply Poppins font */
+}
+
+.newsletter-form input[type="submit"]:hover {
+    background-color: #57290a;
+}
+
+.followus p {
+    font-family: Poppins, sans-serif; /* Apply Poppins font */
+}
+
+@media (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .content-footer {
+        border-bottom: 1px solid white;
+        padding-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icons-socialmedia {
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .newsletter-form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-section h1 {
+        font-size: 1.2rem;
+    }
+
+    .adress-section p {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-form h2 {
+        font-size: 1.2rem;
+    }
+
+    .newsletter-form {
+        padding: 15px;
+    }
+}
+
+.icons-socialmedia a {
+    color: rgb(212, 136, 136);
+    margin-right: 10px;
+    text-decoration: none; /* Remove text decoration */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    color: #333;
+    font-family: Poppins, sans-serif; /* Apply Poppins font */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none; /* Remove text decoration */
+    cursor: pointer;
+}

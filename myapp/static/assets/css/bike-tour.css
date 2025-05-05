@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.containerz {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.rental-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.rental-table th, 
+.rental-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.rental-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.rental-table thead th {
+    background-color: #e8e8e8;
+}
+
+.note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+.BIKETOUR {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+}
+
+.BIKETOUR::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0; /* Ensure it sits behind the content */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensures content is above the overlay */
+    color: #fff; /* Adjust text color for contrast against dark background */
+}
+
+
+
+.section-bike{
+    height: 600px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.div-bike{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.div-image{
+     height: 100%;
+     width: 800px;
+
+}
+
+.div-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.div-paragraph{
+    height: 100%;
+    width:900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+}
+
+.div-paragraph h1{
+    font-size: 30px;
+}
+
+.div-paragraph p{
+    font-size: 20px;
+}
+
+@media (max-width: 650px) {
+
+    .div-bike{
+        flex-direction: column; 
+        padding: 0;
+    }
+    
+
+
+    .div-paragraph{
+        height: auto;
+        width:100%;
+
+    
+    }
+
+    .div-image{
+        height: 300px;
+                width: 100%;
+   
+   }
+
+   .div-bike{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+}
+}

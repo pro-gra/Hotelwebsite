@@ -1,0 +1,69 @@
+.what-peoplesay {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.heading_top {
+    margin-bottom: 40px;
+}
+
+.heading h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Wrap testimonials if they exceed container width */
+}
+
+.zakaria {
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.image-user img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.name h1 {
+    margin: 0 10px 0 0;
+    font-size: 1.2em;
+}
+
+.flag {
+    width: 24px;
+    height: 24px;
+}
+
+.checked {
+    color: orange; /* Change the color to yellow */
+  }
+  
+
+.what-say {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+}
+

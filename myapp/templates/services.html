@@ -1,0 +1,412 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    
+    <title>Servizi | Sunrise Inn B&B</title>
+
+
+
+    <link rel="stylesheet" href="{% static 'assets/css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/navbar1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link href="{%static 'assets/images/logo_sunriseinn.png'%}" rel="icon">
+
+    <script src="{% static 'assets/js/navbar.js' %}?{% now 'U' %}" defer></script>
+
+</head>
+
+<body>
+    <header style="background-image: url('{% static 'assets/images/jaccouzihouda.jpg' %}');">
+        <nav>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+              <li><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+              <li><a href="{%url 'SERVIZI'%}">servizi</a></li>
+              <li><a href="{%url 'GARDEN'%}">Garden</a></li>
+              <li><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+        
+        
+            </ul>
+            <ul>
+              <li><a href="#"><img src="{%static 'assets/images/logo_sunriseinn.png'%}" class="logo"></a></li>
+              <li class="hideOnMobile"><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+              <li class="hideOnMobile"><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+              <li class="hideOnMobile"><a href="{%url 'GARDEN'%}">Garden</a></li>
+        
+              <li class="hideOnMobile"><a href="{%url 'SERVIZI'%}">servizi</a></li>
+              <li class="hideOnMobile"><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+        
+              <li class="menu-button" onclick="showSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="36" width="36" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                    </svg>
+                </a>
+            </li>
+                </ul>
+          </nav>
+        <div class="content">
+            <h1>I nostri <span class="primary-text"> servizi </span></h1>
+            <p>Esplora i nostri servizi e vivi l’esperienza perfetta!</p>
+            <a href="#section1-1" class="btn btn-primary">Scroll down</a>
+        </div>
+        <a href="#section1-1">
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                    <path d="M12 21l-8-8h16l-8 8zm0-18l8 8h-16l8-8z" />
+                </svg>
+            </div>
+        </a>
+    </header>
+
+    <section class="section1" id="section1-1">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="image">
+                <img src="{% static 'assets/images/image-about.jpg' %}" alt="Luxury Jacuzzi with panoramic view at Sunrise inn">
+            </div>
+            <div class="paragraph">
+                <h1>JACUZZI ESTERNO</h1>
+                <p>(per tutte le stagioni) ( servizio extra)
+                    Potrai godere di ulteriore idromassaggio esterno per rigenerarti e rinfrescarti nella stagione estiva o per lasciarti coccolare dalle bolle nel periodo invernale ammirando il paesaggio innevato ed il cielo stellato.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1" id="section1-2">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="paragraph">
+                <h1>SALA FITNESS</h1>
+                <p>La struttura dispone di una palestra ben attrezzata, ideale per gli ospiti che desiderano rimanere in forma durante il soggiorno. Dispone di attrezzature moderne, macchinari cardio e pesi liberi, un ambiente confortevole e stimolante.</p>
+            </div>
+            <div class="image">
+                <img src="{% static 'assets/images/fitnesssala.jpg' %}" alt="Fitness hotel">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section1" id="section1-3">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="image">
+                <img src="{% static 'assets/images/cinema1.jpeg' %}" alt="Cinema-hotel">
+            </div>
+            <div class="paragraph">
+                <h1>MAXI SCHERMO (VISIONE SERALE)</h1>
+                <p>Goditi le serate all’aperto con il nostro maxi schermo, perfetto per rilassarsi sotto le stelle guardando film o eventi speciali. Unisciti a noi per un’esperienza unica di intrattenimento all’aperto, dove la qualità del suono e l’ampia visione ti faranno vivere momenti indimenticabili con amici e familiari.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1" id="section1-4">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="paragraph">
+                <h1>Silent Book Garden & Solarium</h1>
+                <p>Un ampio giardino per rilassarvi sotto il sole, ascoltare la vostra musica, leggere libri della nostra libreria. Approfittate di questo spazio sereno per trascorrere momenti di tranquillità e divertimento, circondati dalla bellezza della natura e da una selezione di letture avvincenti.
+                </p>
+            </div>
+            <div class="image">
+                <img src="{% static 'assets/images/garden.jpeg' %}" alt="garden">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section1" id="section1-5">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="image">
+                <img src="{% static 'assets/images/taverna2.jpg' %}" alt="tavern-hotel">
+            </div>
+            <div class="paragraph">
+                <h1>
+                    La Tavernetta</h1>
+                <p>Servizio Extra: Rilassatevi nella nostra tavernetta, dove potrete ascoltare musica dal vivo al pianoforte e gustare un buon bicchiere di vino. È il posto ideale per un aperitivo o una serata </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section1" id="section1-6">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="paragraph">
+                <h1>
+                    Sala Giochi
+                    </h1>
+                <p>Biliardo / Video giochi)
+                    Divertimento garantito nella nostra sala giochi, completa di tavolo da gioco professionale.</p>
+            </div>
+            <div class="image">
+                <img src="{% static 'assets/images/biliardo.jpg' %}" alt="hotel billiardo">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section1" id="section1-7">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="image">
+                <img src="{% static 'assets/images/spa.jpeg' %}" alt="spa hotel">
+            </div>
+            <div class="paragraph">
+                <h1>ZONA RELAX E ABBRONZATURA
+                </h1>
+                <p>Spazio Relax e Abbronzatura: Godetevi il massimo del relax nel nostro spazio dedicato al relax e alla bronzatura, dove potrete prendere il sole e rigenerarvi. Situato in una posizione privilegiata, questo angolo offre una vista panoramica mozzafiato, ideale per rilassarsi e distendersi mentre vi lasciate coccolare dal sole.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1" id="section1-8">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="paragraph">
+                <h1>Terrazza Aperitivi con Maxi Schermo</h1>
+                <p>Avrete a disposizione un’ampia terrazza per semplice relax, colazioni, aperitivi e cene all’aria aperta.
+                    Grazie al Maxi schermo esterno, potrete godere della visione dei vostri film o eventi sportivi preferiti.</p>
+            </div>
+            <div class="image">
+                <img src="{% static 'assets/images/terassa.jpg' %}" alt="restaurant-hotel">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section1" id="section1-9">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="image">
+                <img src="{% static 'assets/images/ecars.jpg' %}" alt="cars charge">
+            </div>
+            <div class="paragraph">
+                <h1>
+                    COLONNINA CARICA AUTO
+                    
+                </h1>
+                <p>Stazione di ricarica per auto elettriche disponibile per gli ospiti.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section1" id="section1-10">
+        <div class="big-box">
+            <div class="overlay"></div>
+            <div class="paragraph">
+                <h1>
+                    Defibrillatore
+                    </h1>
+                <p>Per la sicurezza dei nostri ospiti, disponiamo di un defibrillatore facilmente accessibile e pronto all’uso.</p>
+            </div>
+            <div class="image">
+                <img src="{% static 'assets/images/defibrillator-1.jpg' %}" alt="heart">
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>Sunrise Inn B&B</h1>
+                </div>
+                <div class="address-section" style="color: white;">
+                    <p>Torino . LANZO Frazione Gisola 27/C . 10070 Pessinetto (TO)</p>
+                    <p>Tel : +39 331 126 8529</p>
+                    <p style="margin-top: 1px;">gmail : info@sunriseinn.it</p>
+                    <a href="{% url 'HOMEPAGE' %}">
+                        <img src="{% static 'assets/images/logo_sunriseinn.png' %}" class='logo-footer' alt="Sunrise Inn Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>FOLLOW US ON SOCIAL MEDIA</h1>
+                </div>
+                <div>
+                    <p style="color: rgb(255, 255, 255); margin-bottom: 10px;">
+                        Seguici sui social media per scoprire le nuove offerte e trovare ulteriori informazioni:
+                    </p>
+                </div>
+                <div class="icons-socialmedia">
+                    <a href="https://www.instagram.com/sunriseinnhotel/">Instagram</a>
+                    <a href="https://www.facebook.com/sunriseinnhotel">Facebook</a>
+                </div>
+                <div class="footer-links">
+                    <a href="#contact">Contact Us</a> |
+                    <a href="{%url 'SERVIZI' %}">About Us</a> |
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>Iscrivetevi</h1>
+                </div>
+                <div class="newsletter-form">
+                    <p>ISCRIVITI PER OFFERTE SPECIALI</p>
+                    <form class="form" method="post">
+                        {% csrf_token %}
+                        <label style='margin-top: 15px;' for="email">Email:</label>
+                        <input required placeholder="Enter your email address" name="email" id="email" type="email">
+                        <input value="Iscrivetevi" type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Privacy Policy Modal -->
+        <div id="privacy-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Informativa sulla Privacy</h2>
+                <p>
+                    Per avere informazioni circa i tuoi dati personali raccolti, le finalità ed i soggetti con cui i dati vengono condivisi, contatta il Titolare.</p>
+            </div>
+        </div>
+
+
+
+            <div id="contact-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Contact Us</h2>
+                    <p>Phone: +39 331 126 8529</p>
+                    <p>Email: info@sunriseinn.it</p>
+                </div>
+            </div>
+        </footer>
+        
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    // Get the modal
+    var modal = document.getElementById("privacy-modal");
+
+    // Get the link that opens the modal
+    var privacyLink = document.querySelector('a[href="#privacy"]');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the link, open the modal
+    privacyLink.onclick = function() {
+        modal.style.display = "block";
+        return false; // Prevent default link behavior
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Get the modals
+    var privacyModal = document.getElementById("privacy-modal");
+    var contactModal = document.getElementById("contact-modal");
+
+    // Get the links that open the modals
+    var privacyLink = document.querySelector('a[href="#privacy"]');
+    var contactLink = document.querySelector('a[href="#contact"]');
+
+    // Get the <span> elements that close the modals
+    var closeButtons = document.getElementsByClassName("close");
+
+    // When the user clicks on a link, open the corresponding modal
+    privacyLink.onclick = function() {
+        privacyModal.style.display = "block";
+        return false; // Prevent default link behavior
+    }
+
+    contactLink.onclick = function() {
+        contactModal.style.display = "block";
+        return false; // Prevent default link behavior
+    }
+
+    // When the user clicks on a close button, close the corresponding modal
+    for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].onclick = function() {
+            privacyModal.style.display = "none";
+            contactModal.style.display = "none";
+        }
+    }
+
+    // When the user clicks anywhere outside of a modal, close it
+    window.onclick = function(event) {
+        if (event.target == privacyModal || event.target == contactModal) {
+            privacyModal.style.display = "none";
+            contactModal.style.display = "none";
+        }
+    }
+});
+
+
+
+</script>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    function handleScroll() {
+        const sections = document.querySelectorAll('.section1');
+        sections.forEach(section => {
+            const sectionPosition = section.getBoundingClientRect();
+            if (sectionPosition.top < window.innerHeight && sectionPosition.bottom > 0) {
+                section.classList.add('in-view');
+            } else {
+                section.classList.remove('in-view');
+            }
+        });
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+});
+
+    </script>
+</body>
+
+</html>

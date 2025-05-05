@@ -1,0 +1,280 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Locali suggeriti  | Sunrise Inn B&B</title>
+
+    <link href="{%static 'assets/images/logo_sunriseinn.png'%}" rel="icon">
+    <link rel="stylesheet" href="{%static 'assets/css/footer.css'%}">    
+    <link rel="stylesheet" href="{%static 'assets/css/hotel-restaurant.css'%}">    
+    <link rel="stylesheet" href="{%static 'assets/css/navbar1.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="{% static 'assets/js/navbar.js' %}?{% now 'U' %}"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <!-- Header Start -->
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+          <li><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+          <li><a href="{%url 'SERVIZI'%}">servizi</a></li>
+          <li><a href="{%url 'GARDEN'%}">Garden</a></li>
+          <li><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+    
+    
+        </ul>
+        <ul>
+          <li><a href="#"><img src="{%static 'assets/images/logo_sunriseinn.png'%}" class="logo"></a></li>
+          <li class="hideOnMobile"><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+          <li class="hideOnMobile"><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+          <li class="hideOnMobile"><a href="{%url 'GARDEN'%}">Garden</a></li>
+    
+          <li class="hideOnMobile"><a href="{%url 'SERVIZI'%}">servizi</a></li>
+          <li class="hideOnMobile"><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+    
+          <li class="menu-button" onclick="showSidebar()">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="36" width="36" viewBox="0 96 960 960" width="26">
+                    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                </svg>
+            </a>
+        </li>
+            </ul>
+      </nav>
+
+    <!-- Header End -->
+    <main>
+        <!-- About Section Start -->
+        <section id="about">
+            <div class="container">
+                <div class="title">
+                    <h2>
+                        Locali suggeriti
+                        </h2>
+                    <p>4+ ristoranti con cui collaboriamo.</p>
+                </div>
+                <div class="about-content">
+                    <div>
+                        <p>Scopri i migliori ristoranti a Gisola, Pessinetto, suggeriti dal Sunrise Inn B&B.
+                            Ogni locale è stato selezionato per offrire un'esperienza culinaria unica nel cuore del Piemonte. </p>
+                        
+                    </div>
+                    <img src="{%static 'assets/images-restaurant/contact.jpeg'%}" alt="Pizza">
+                </div>
+            </div>
+        </section>
+        <!-- About Section End -->
+
+        <section class="restaurant-section">
+            <div class="restaurant">
+                <div class="container2">
+                    <div class="image"><img src="{%static 'assets/images-restaurant/Taverna-di-Noe.jpg'%}">
+                    </div>
+                    <div class="paragraph">
+                        <h1>
+                            Taverna di Noè
+                            </h1>
+                        <h3>Vicolo della Tettoria 6 – Lanzo Torinese
+                            Tel. 0123.29163</h3>
+                        <p>
+
+                            Pensare di trovare a Lanzo uno dei migliori ristoranti di pesce è incredibile. Ottimi piatti preparati con cura e pesce freschissimo. Cucina non banale e ambiente cordiale. Questo ristorante è certamente uno dei migliori ristoranti a Gisola Pessinetto.
+                            
+                            Locale molto carino con piccole nicchie che creano uno spazio non troppo rumoroso e allo stesso tempo conviviale. Non sorprende che sia tra i migliori ristoranti a Gisola Pessinetto.
+                            </p>
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <div class="paragraph">
+                        <h1>
+                            Trattoria Osteria
+'L Circul
+                            </h1>
+                        <h3>Via Roma 31 – 10070 Pessinetto
+                            Tel. 0123.504310</h3>
+                        <p>
+                            Trattoria … una trattoria che è davvero una trattoria! Tavoli semplici, servizio semplice, come deve essere davvero un posto così. Piatti non elaborati ma buoni, come gli antipasti misti. Disponibilità e Cortesia del personale. Questa trattoria è una gemma nascosta tra i migliori ristoranti a Gisola Pessinetto.
+                            </p>
+                    </div>                    <div class="image">                    <div class="image"><img src="{%static 'assets/images-restaurant/Trattoria-Osteria-L-Circul-.jpg'%}">
+                    </div></div>
+                </div>
+
+                <div class="container2">
+                    <div class="image"><img src="{%static 'assets/images-restaurant/LA-TOUMATICA.jpg'%}">
+                    </div>
+                    <div class="paragraph">
+                        <h1>
+                            
+La toumatica
+
+                            </h1>
+                        <h3>Via Losa 2 – Pessinetto
+                            Tel. 0123.504052</h3>
+                        <p>
+
+
+                            L’atmosfera ospitale di questo ristorante dipende in larga misura dal personale, che qui è davvero professionale. L’incomiabile servizio vi metterà sicuramente a vostro agio. Sarà un’opportunità per godervi un ambiente gioviale. Semplici ma ineguagliabili pizze e hamburger a km 0.
+
+                            Piccola ma ben curata la carta dei vini, come pure quella delle birre, tra cui alcune interessanti “bio” non filtrate. Questo ristorante merita sicuramente un posto tra i migliori ristoranti a Gisola Pessinetto.
+                            
+                          </p>
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <div class="paragraph">
+                        <h1>
+                            
+Bistrot del Portico
+
+                            </h1>
+                        <h3>Via Roma 12 - Lanzo Torinese
+                            Tel. 0123.27233</h3>
+                        <p>
+                            Un’esperienza unica.
+                            Il locale ha una sala intima, in cui degustare piatti ricercati e curati sia nell’abbinamento di sapori, sia nella presentazione che è sempre eccellente. Questo è ciò che rende uno dei migliori ristoranti a Gisola Pessinetto.
+                            
+                            Mise en place molto curata e servizio impeccabile, così come la carta dei vini proposta e gli abbinamenti consigliati. Perfetto sia per una cena romantica, che per una cena tra amici che ricercano la qualità. Il locale è molto curato nei dettagli e nella pulizia. La cantina dei vini lascia davvero senza fiato.
+                            
+                            Il personale e i proprietari sono gentilissimi, disponibili e preparati anche per chi ha intolleranze alimentari. Ogni cosa è sorprendente e di un altro livello: perfetti. Questo è un altro motivo per cui è considerato tra i migliori ristoranti a Gisola Pessinetto.</p>
+                    </div>                    <div class="image">                    <div class="image"><img src="{%static 'assets/images-restaurant/Bistrot-Del-Portico.png'%}">
+                    </div></div>
+                </div>
+
+
+                <div class="container2">
+                    <div class="image"><img src="{%static 'assets/images-restaurant/A-La-Ressia.jpg'%}">
+                    </div>
+                    <div class="paragraph">
+                        <h1>
+        
+                            A La Ressia
+                            </h1>
+                        <h3>Via Loreto 118 – Lanzo Torinese
+                            Tel. 340.6769984</h3>
+                        <p>
+                            
+
+Ristorante molto carino in uno spazio fresco e ombreggiato leggermente fuori Lanzo.
+
+Il menù è vario e propone piatti tipici della cucina di montagna piemontese, ottimo l’antipasto misto di terra o con verdure di stagione per qualità e quantità e assolutamente da provare il cinghiale e il reale di vitello.
+
+La scelta di un unico menu esposto per non sprecare carta è molto apprezzata e condivisa, permette di fare due parole in più. Questo approccio ecologico lo posiziona tra i migliori ristoranti a Gisola Pessinetto.
+
+Se amate la polenta non aspettatevi la classica fettina passata al forno, A La Ressia viene servita una vera polenta stile Valle di Lanzo in due piccoli paiuoli stagnati, colmi di polenta integrale, uno ‘nature e l’altro concio di formaggio accompagnati da ottima salsiccia in umido o spezzatino di cinghiale. Il paradiso! Non c’è dubbio che questo sia uno dei migliori ristoranti a Gisola Pessinetto.
+
+</p>
+                    </div>
+                </div>
+                
+
+
+
+
+
+                
+
+            </div>
+
+
+
+
+        </section>
+
+        <footer>
+            <div class="footer">
+                <div class="content-footer">
+                    <div class="logo-section">
+                        <h1>Sunrise Inn B&B</h1>
+                    </div>
+                    <div class="address-section" style="color: white;">
+                        <p>Torino . LANZO Frazione Gisola 27/C . 10070 Pessinetto (TO)</p>
+                        <p style="color: white;">Tel : 39 331 126 8529</p>
+                        <p style="margin-top: 1px;">gmail : info@sunriseinn.it</p>
+                        <a href="{% url 'HOMEPAGE' %}">
+                            <img src="{% static 'assets/images/logo_sunriseinn.png' %}" class='logo-footer' alt="Sunrise Inn Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer">
+                <div class="content-footer">
+                    <div class="logo-section">
+                        <h1>FOLLOW US ON SOCIAL MEDIA</h1>
+                    </div>
+                    <div>
+                        <p style="color: rgb(255, 255, 255); margin-bottom: 10px;">
+                            Seguici sui social media per scoprire le nuove offerte e trovare ulteriori informazioni:
+                        </p>
+                    </div>
+                    <div class="icons-socialmedia">
+                        <a href="https://www.instagram.com/sunriseinnhotel/">Instagram</a>
+                        <a href="https://www.facebook.com/sunriseinnhotel">Facebook</a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#contact">Contact Us</a> |
+                        <a href="{%url 'SERVIZI' %}">About Us</a> |
+                        <a href="#privacy">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer">
+                <div class="content-footer">
+                    <div class="logo-section">
+                        <h1>Iscrivetevi</h1>
+                    </div>
+                    <div class="newsletter-form">
+                        <p>ISCRIVITI PER OFFERTE SPECIALI</p>
+                        <form class="form" method="post">
+                            {% csrf_token %}
+                            <label style='margin-top: 15px;' for="email">Email:</label>
+                            <input required placeholder="Enter your email address" name="email" id="email" type="email">
+                            <input value="Iscrivetevi" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Privacy Policy Modal -->
+            <div id="privacy-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Informativa sulla Privacy</h2>
+                    <p>
+                        Per avere informazioni circa i tuoi dati personali raccolti, le finalità ed i soggetti con cui i dati vengono condivisi, contatta il Titolare.</p>
+                </div>
+            </div>
+    
+    
+    
+                <div id="contact-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Contact Us</h2>
+                        <p>Phone: +39 331 126 8529</p>
+                        <p>Email: info@sunriseinn.it</p>
+                    </div>
+                </div>
+            </footer>
+
+</body>
+
+</html>

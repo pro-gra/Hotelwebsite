@@ -1,0 +1,776 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+    <title>Pagina principale | Sunrise Inn B&B</title>
+    <link href="{%static 'assets/images/logo_sunriseinn.png'%}" rel="icon">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="steyleshet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-xB3bZcF8bG6Q0Cf5nPQZZ3oxpFfUuN4xvQOCJhVjOv3p0M7ibDqRa8SAqTx0XkWvHh5vNoL3uPqI6yOaXQwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{%static 'assets/css/homepage.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/navbar1.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/gallerie.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/about.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/rooms-section.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/avis.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/footer.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/servizi-section.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/restaurant-section.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    
+
+    <script src="{% static 'assets/js/HOMEPAGE.js' %}?{% now 'U' %}"></script>
+    <script src="{% static 'assets/js/navbar.js' %}?{% now 'U' %}"></script>
+
+
+
+
+
+    <style>
+    @font-face {
+        font-family: 'MyCustomFont';
+        src: url("{% static 'assets/fonts/CatchyMager-Normal.woff' %}") format('woff'),
+             url("{% static 'assets/fonts/CatchyMager-Normal.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GreatVibes-Regular';
+        src: url("{% static 'assets/fonts/GreatVibes-Regular.woff' %}") format('woff'),
+             url("{% static 'assets/fonts/GreatVibes-Regular.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+    @font-face {
+    font-family: 'Village';
+    src: url("{% static 'assets/fonts/Village.otf' %}") format('opentype');
+
+}
+
+
+
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <header class="hero-header" id="hero-header">
+        <nav>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+              <li><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+              <li><a href="{%url 'SERVIZI'%}">servizi</a></li>
+              <li><a href="{%url 'GARDEN'%}">Garden</a></li>
+              <li><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+        
+        
+            </ul>
+            <ul>
+              <li><a href="#"><img src="{%static 'assets/images/logo_sunriseinn.png'%}" class="logo"></a></li>
+              <li class="hideOnMobile"><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+              <li class="hideOnMobile"><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+              <li class="hideOnMobile"><a href="{%url 'GARDEN'%}">Garden</a></li>
+        
+              <li class="hideOnMobile"><a href="{%url 'SERVIZI'%}">servizi</a></li>
+              <li class="hideOnMobile"><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+        
+              <li class="menu-button" onclick="showSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="36" width="36" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                    </svg>
+                </a>
+            </li>
+                </ul>
+          </nav>
+        <div class="overlay"></div> 
+        <div class="header-content">
+            <h3 class="header-welcome"></h3>
+            <h1 class="header-title" style="font-family:Village"></h1>
+            <p class="header-subtitle" ></p>
+            <a href="#learn-more" class="header-button"></a>
+        </div>
+    </header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const headers = [
+        {
+            image: "{% static 'assets/images/view-mountains.jpeg' %}",
+            title: "sunrise inn",
+            subtitle: "B&B AND SPA",
+            button: "BOOK NOW"
+        },
+
+    ];
+
+    let currentIndex = 0;
+    const headerElement = document.getElementById('hero-header');
+    const titleElement = document.querySelector('.header-title');
+    const subtitleElement = document.querySelector('.header-subtitle');
+    const buttonElement = document.querySelector('.header-button');
+
+    function changeHeaderContent() {
+        const header = headers[currentIndex];
+        
+        headerElement.style.backgroundImage = `url('${header.image}')`;
+
+        // Update text content
+        titleElement.textContent = header.title;
+        subtitleElement.textContent = header.subtitle;
+        buttonElement.textContent = header.button;
+
+        // Ensure text elements are visible
+        titleElement.classList.add('visible');
+        subtitleElement.classList.add('visible');
+        buttonElement.classList.add('visible');
+
+        // Add animation class to background
+        headerElement.classList.remove('zoomRightToLeft', 'zoomLeftToRight'); // Remove any existing animation class
+        headerElement.classList.add(currentIndex % 2 === 0 ? 'zoomRightToLeft' : 'zoomLeftToRight'); // Apply appropriate animation
+
+        currentIndex = (currentIndex + 1) % headers.length;
+    }
+
+    // Initialize first set of content
+    changeHeaderContent();
+
+    // Change content every 3 seconds
+    setInterval(changeHeaderContent, 5000);
+});
+
+</script>
+    
+
+    <section style="margin-bottom: 100px;" class="section2" >
+        <div class="heading_top flex1">
+            <div class="heading">
+                <h2 >CHI SIAMO
+                </h2>
+            </div>
+        </div>
+
+        <div class="box3">
+            
+            <div class="box1">
+                <img src="{%static 'assets/images/image-about.jpg'%}" class="image-about" alt="jaccuzi hotel">
+                        </div>
+            <div class="box2">
+                        <div class="container">
+
+
+
+            
+                <div class="titleabout">
+                     <h2 class="TITLE">
+                        SUNRISE INN PESSINETTO
+                        </h2>
+                </div>
+                <div class="paragraph-about"> <p>
+                    Sunrise Inn è situato a 900 mt di altezza nelle montagne delle valli di Lanzo, a Gisola, una delle borgate piu piccole del comune di Pessinetto, distante 8,2 km da Lanzo Torinese, 20 km dall’aeroporto internazionale di Caselle torinese, 40 km dal centro di Torino.
+
+Sunrise Inn è il B&B ideale per momenti rigeneranti, grazie ai suoi servizi di alta qualità.
+
+                </p></div>
+                <a href="{%url 'ABOUT'%}"><button class="button-about" id="button" type="button">See more</button></a>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color:#CD9425; margin-bottom: 110px;">
+        <div class="heading_top flex1">
+            <div class="heading">
+                <h2>Appartamenti e Suite</h2>
+            </div>
+            <div class="gallery-container scroll-trail">
+                <a href="{%url 'LARUSTICA'%}" class="gallery-item" style="background-image: url('{% static "assets/images/homepage.jpg" %}'); background-size: cover; background-position: center;">
+                    <div class="content-section">
+                        <span class="title-text">LA RUSTICA</span>
+                        <p class="description-text">
+                            Scopri La Rustica, un appartamento incantevole in legno che unisce eleganza e comfort. Goditi l'atmosfera calda e accogliente e rilassati nella jacuzzi esterna inclusa...
+
+                        </p>
+                    </div>
+                </a>
+
+                <a href="{%url 'BACIATADALSOLE'%}" class="gallery-item" style="background-image: url('{% static "assets/images-rooms/Baciata-dal-Sole.jpg" %}'); background-size: cover; background-position: center;">
+                    <div class="content-section">
+                        <span class="title-text">BACIATA DAL SOLE</span>
+                        <p class="description-text">
+                            Un rifugio luminoso con vista mozzafiato. Goditi la luce naturale, il comfort degli spazi eleganti e un panorama incantevole...
+                        </p>
+                    </div>
+                </a>
+                <a href="{%url 'BELLAVISTA'%}" class="gallery-item" style="background-image: url('{% static "assets/images-rooms/room1.jpg" %}'); background-size: cover; background-position: center;">
+                    <div class="content-section">
+                        <span class="title-text">BELLAVISTA</span>
+                        <p class="description-text">
+                            Scopri Bellavista, il tuo rifugio ideale con vista panoramica sulle montagne di Pessinetto. Questo appartamento accogliente offre tutti i comfort...                        </p>
+                    </div>
+                </a>
+
+                <a href="{%url 'LAROMANTICA'%}" class="gallery-item" style="background-image: url('{% static "assets/images-rooms/la-romantica.jpg" %}'); background-size: cover; background-position: center;">
+                    <div class="content-section">
+                        <span class="title-text">LA ROMANTICA</span>
+                        <p class="description-text">
+                            Un rifugio intimo e accogliente, perfetto per coppie in cerca di eleganza e tranquillità. Atmosfera raffinata, arredi curati e dettagli...                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="heading_top flex1">
+        <div class="heading" style="colo">
+            <h2>nostri servizi
+            </h2>
+        </div>
+    </div>
+
+    <section class="wrapper top" style="background-color: #CD9425">
+        <div class="container">
+          <div class="text">
+            <h2>
+                NOSTRI SERVIZI
+                </h2>
+            <p>Presso il nostro B&B, troverete una vasta gamma di attività pensate per offrirvi un'esperienza di lusso e relax senza pari. Dalla nostra esclusiva spa a eventi speciali, ogni momento sarà dedicato al vostro benessere e alla vostra soddisfazione.</p>
+    
+            <div class="content">
+              <div class="box flex">
+                <i class="fas fa-wifi"></i>
+                <span>Wifi</span>
+              </div>
+              <div class="box flex">
+                <i class="fas fa-dumbbell"></i>
+                <span>Palestra</span>
+              </div>
+              <div class="box flex">
+                <i class="fas fa-spa"></i>
+                <span>Spa & massage</span>
+              </div>
+              <div class="box flex">
+                <i class="fas fa-gamepad"></i>
+                <span>Biliardo</span>
+              </div>
+              <div class="box flex">
+                <i class="fas fa-tree"></i>
+                <span>Giardino</span>
+              </div>
+              <div class="box flex">
+                <i class="fas fa-film"></i>
+                <span>Maxi Schermo</span>
+              </div>
+              <div class="box flex">
+                <i class="fas fa-charging-station"></i>
+                <span>Ricarica Auto</span>
+              </div>
+              <div class="box flex">
+                <i class="fas fa-hot-tub"></i>
+                    <span>Vasca idromassagio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section style= "margin-bottom: 100px;" id="restaurant-section">
+
+        <div style='margin-bottom: 80px;'  class="heading_top flex1">
+            <div class="heading">
+                <h2>
+                    Locali suggeriti
+                    
+                </h2>
+            </div>
+        </div>
+
+                
+                </h2>
+            </div>
+        </div>
+
+        <div class="box3">
+            
+            <div class="salad">
+                <img src="{% static 'assets/images/salade1.png' %}" class="salade" alt="salade">
+            </div>
+            <div class="box2">
+                        <div class="container">
+
+
+
+            
+                <div class="titleabout">
+                     <h2 class="TITLE">
+                        
+Locali suggeriti
+
+                        </h2>
+                </div>
+                <div class="paragraph-about"> <p>
+                    Scopri i migliori ristoranti a Gisola, Pessinetto, suggeriti dal Sunrise Inn B&B.
+                    Ogni locale è stato selezionato per offrire un'esperienza culinaria unica nel cuore del Piemonte.
+                    <br>  Questi ristoranti non solo offrono un’eccellente cucina, ma anche un'atmosfera calda e accogliente, ideale per<br> un'esperienza gastronomica indimenticabile. Che tu stia cercando piatti tradizionali o nuove scoperte culinarie, questi suggerimenti sono il punto di partenza perfetto per il tuo soggiorno.
+
+
+
+                </p></div>
+                <a href="{%url 'RESTAURANT'%}"><button class="button-about" id="button" type="button">See more</button></a>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section style='margin-bottom: 150px;background-color: #CD9425;' class="photo-gallery" id="gallery">
+
+        <div class="heading_top flex1">
+            <div class="heading">
+                <h2>GALERIA
+                </h2>
+            </div>
+        </div>
+        <div class="gallery-wrapper" style="background-color: #CD9425;">
+            <button class="nav-btn prev-btn">&#8249;</button>
+    
+            <div class="image-slider">
+                <div class="image-track">
+                    <div class="gallery-image" data-index="0">
+                        <a href="#" class="image" data-index="0">
+                            <img src="{% static 'assets/images/taverna-houda.jpg' %}" alt="taverna">
+                        </a>
+                    </div>
+                    
+                    <div class="gallery-image" data-index="1">
+                        <a href="#" class="image" data-index="1">
+                            <img src="{%static 'assets/images/spa.jpg'%}" alt="spa">
+                        </a>
+                    </div>
+                    <div class="gallery-image" data-index="2">
+                        <a href="#" class="image" data-index="2">
+                            <img src="{%static 'assets/images/rouge.jpg'%}" alt="rouge">        
+                        </a>
+                    </div>
+
+                    <div class="gallery-image" data-index="3">
+                        <a href="#" class="image" data-index="3">
+                            <img src="{%static 'assets/images/jaccouzi2.jpg'%}" alt="jaccouzi">        
+                        </a>
+                    </div>
+
+                    <div class="gallery-image" data-index="4">
+                        <a href="#" class="image" data-index="4">
+                            <img src="{%static 'assets/images/book.jpeg'%}" alt="taverna">        
+                        </a>
+   
+
+
+                    <!-- ... -->
+                </div>
+
+                <div class="gallery-image" data-index="5">
+                    <a href="#" class="image" data-index="5">
+                        <img src="{%static 'assets/images/spa.jpeg'%}" alt="spa">        
+                    </a>
+
+
+
+                <!-- ... -->
+            </div>
+
+            <div class="gallery-image" data-index="6">
+                <a href="#" class="image" data-index="6">
+                    <img src="{%static 'assets/images/library.jpeg'%}" alt="library">        
+                </a>
+
+
+
+            <!-- ... -->
+        </div>
+
+        <div class="gallery-image" data-index="7">
+            <a href="#" class="image" data-index="7">
+                <img src="{%static 'assets/images/taverna.jpg'%}" alt="taverna">        
+            </a>
+
+
+
+        <!-- ... -->
+    </div>
+
+    <div class="gallery-image" data-index="8">
+        <a href="#" class="image" data-index="8">
+            <img src="{%static 'assets/images/spa2.jpg'%}" alt="spa">        
+        </a>
+
+
+
+    <!-- ... -->
+</div>
+    
+<div class="gallery-image" data-index="9">
+    <a href="#" class="image" data-index="9">
+        <img src="{%static 'assets/images/fitnesssala.jpg'%}" alt="fitness">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="10">
+    <a href="#" class="image" data-index="10">
+        <img src="{%static 'assets/images/view-mountains.jpeg'%}" alt="vien mountains">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="11">
+    <a href="#" class="image" data-index="11">
+        <img src="{%static 'assets/images/cinema1.jpeg'%}" alt="cinema">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="12">
+    <a href="#" class="image" data-index="12">
+        <img src="{%static 'assets/images/terassa.jpg'%}" alt="restaurant hotel">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="13">
+    <a href="#" class="image" data-index="13">
+        <img src="{%static 'assets/images-rooms/room1.jpg'%}" alt="room hotel">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="14">
+    <a href="#" class="image" data-index="14">
+        <img src="{%static 'assets/images-rooms/room9.jpg'%}" alt="room ">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="15">
+    <a href="#" class="image" data-index="15">
+        <img src="{%static 'assets/images-rooms/room10.jpg'%}" alt="room ">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="16">
+    <a href="#" class="image" data-index="16">
+        <img src="{%static 'assets/images-rooms/room3.jpg'%}" alt="room ">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="17">
+    <a href="#" class="image" data-index="17">
+        <img src="{%static 'assets/images-rooms/room5.jpg'%}" alt="room ">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="18">
+    <a href="#" class="image" data-index="18">
+        <img src="{%static 'assets/images-rooms/room6.jpg'%}" alt="room ">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="19">
+    <a href="#" class="image" data-index="19">
+        <img src="{%static 'assets/images/hello.jpeg'%}" alt="jaccouzi ">        
+    </a>
+
+
+
+<!-- ... -->
+</div>
+
+<div class="gallery-image" data-index="20">
+    <a href="#" class="image" data-index="20">
+        <img src="{%static 'assets/images/dog.jpeg'%}" alt="dog ">        
+    </a>
+
+
+            </div>
+
+            <div class="gallery-image" data-index="21">
+                <a href="#" class="image" data-index="21">
+                    <img src="{%static 'assets/images/jaccouzinight.jpeg'%}" alt="jaccouzi">        
+                </a>
+            
+            
+                        </div>
+    
+            <button class="nav-btn next-btn">&#8250;</button>
+        </div>
+    </section>
+    
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <button class="lightbox-nav prev-lightbox">&#8249;</button>
+            <img class="lightbox-image" src="" alt="Lightbox Image">
+            <div class="lightbox-caption">
+                <span class="lightbox-index">1 of 1</span>
+            </div>
+            <button class="lightbox-nav next-lightbox">&#8250;</button>
+        </div>
+    </div>
+    
+    <section style='margin-bottom: 100px;'class="what-peoplesay">
+        <div class="heading_top">
+            <div class="heading">
+                <h2>Cosa dicono le persone.</h2>
+            </div>
+        </div>
+    
+        <div class="testimonials">
+            <div class="zakaria">
+ 
+                <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <div class="name"><h1>Alberto</h1></div>
+                <img src="{%static 'assets/images/R.png'%}" class="flag" alt="flag">   
+                <div class="what-say">
+                    « Sinceramente tutto, dalla struttura, alla gentilezza dei proprietari alla pulizia perfetta. »
+                </div>
+            </div>
+    
+            <div class="zakaria">
+
+                <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="name"><h1>Laurent</h1></div>
+                <img src="{%static 'assets/images/suisse.png'%}" class="flag" alt="flag">            
+                <div class="what-say">
+                    Grande chambre avec cuisine attenante. Belle vue sur le village et les montagnes. Calme.
+                </div>
+            </div>
+    
+            <div class="zakaria">
+
+                <div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <div class="name"><h1>Mike</h1></div>
+                <img src="{%static 'assets/images/usa.jpg'%}" class="flag" alt="flag">            
+                <div class="what-say">
+                    Great place, staff was so nice. The surprised us with some great experiences not mentioned in the booking. Definitely recommend if your in the area.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>Sunrise Inn B&B</h1>
+                </div>
+                <div class="address-section" style="color: white;">
+                    <p>Torino . LANZO Frazione Gisola 27/C . 10070 Pessinetto (TO)</p>
+                    <p style="color: white;">Tel : 39 331 126 8529</p>
+                    <p style="margin-top: 1px;">gmail : info@sunriseinn.it</p>
+                    <a href="{% url 'HOMEPAGE' %}">
+                        <img src="{% static 'assets/images/logo_sunriseinn.png' %}" class='logo-footer' alt="Sunrise Inn Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>FOLLOW US ON SOCIAL MEDIA</h1>
+                </div>
+                <div>
+                    <p style="color: rgb(255, 255, 255); margin-bottom: 10px;">
+                        Seguici sui social media per scoprire le nuove offerte e trovare ulteriori informazioni:
+                    </p>
+                </div>
+                <div class="icons-socialmedia">
+                    <a href="https://www.instagram.com/sunriseinnhotel/">Instagram</a>
+                    <a href="https://www.facebook.com/sunriseinnhotel">Facebook</a>
+                </div>
+                <div class="footer-links">
+                    <a href="#contact">Contact Us</a> |
+                    <a href="{%url 'SERVIZI' %}">About Us</a> |
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>Iscrivetevi</h1>
+                </div>
+                <div class="newsletter-form">
+                    <p style="color: black;">ISCRIVITI PER OFFERTE SPECIALI</p>
+                    <form class="form" method="post">
+                        {% csrf_token %}
+                        <label style='margin-top: 15px;' for="email">Email:</label>
+                        <input required placeholder="Enter your email address" name="email" id="email" type="email">
+                        <input value="Iscrivetevi" type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div id="privacy-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Informativa sulla Privacy</h2>
+                <p>
+                    Per avere informazioni circa i tuoi dati personali raccolti, le finalità ed i soggetti con cui i dati vengono condivisi, contatta il Titolare.</p>
+            </div>
+        </div>
+
+
+
+            <div id="contact-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Contact Us</h2>
+                    <p>Phone: +39 331 126 8529</p>
+                    <p>Email: info@sunriseinn.it</p>
+                </div>
+            </div>
+        </footer>
+        
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    var modal = document.getElementById("privacy-modal");
+
+    var privacyLink = document.querySelector('a[href="#privacy"]');
+
+    var span = document.getElementsByClassName("close")[0];
+
+    privacyLink.onclick = function() {
+        modal.style.display = "block";
+        return false; 
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    var privacyModal = document.getElementById("privacy-modal");
+    var contactModal = document.getElementById("contact-modal");
+
+    var privacyLink = document.querySelector('a[href="#privacy"]');
+    var contactLink = document.querySelector('a[href="#contact"]');
+
+    var closeButtons = document.getElementsByClassName("close");
+
+    privacyLink.onclick = function() {
+        privacyModal.style.display = "block";
+        return false; 
+    }
+
+    contactLink.onclick = function() {
+        contactModal.style.display = "block";
+        return false;  
+    }
+
+    for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].onclick = function() {
+            privacyModal.style.display = "none";
+            contactModal.style.display = "none";
+        }
+    }
+
+    window.onclick = function(event) {
+        if (event.target == privacyModal || event.target == contactModal) {
+            privacyModal.style.display = "none";
+            contactModal.style.display = "none";
+        }
+    }
+});
+
+
+
+</script>
+    
+ 
+</body>
+</html>

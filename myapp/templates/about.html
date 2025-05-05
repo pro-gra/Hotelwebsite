@@ -1,0 +1,266 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo | Sunrise Inn B&B</title>
+    <link href="{%static 'assets/images/logo_sunriseinn.png'%}" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-xB3bZcF8bG6Q0Cf5nPQZZ3oxpFfUuN4xvQOCJhVjOv3p0M7ibDqRa8SAqTx0XkWvHh5vNoL3uPqI6yOaXQwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{%static 'assets/css/navbar1.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/footer.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/about-page.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="{% static 'assets/js/navbar.js' %}?{% now 'U' %}"></script>
+    <script src="{% static 'assets/js/about.js' %}?{% now 'U' %}"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+
+
+<body>
+
+
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+          <li><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+          <li><a href="{%url 'SERVIZI'%}">servizi</a></li>
+          <li><a href="{%url 'GARDEN'%}">Garden</a></li>
+          <li><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+    
+    
+        </ul>
+        <ul>
+          <li><a href="#"><img src="{%static 'assets/images/logo_sunriseinn.png'%}" class="logo"></a></li>
+          <li class="hideOnMobile"><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+          <li class="hideOnMobile"><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+          <li class="hideOnMobile"><a href="{%url 'GARDEN'%}">Garden</a></li>
+          <li class="hideOnMobile"><a href="{%url 'SERVIZI'%}">servizi</a></li>
+          <li class="hideOnMobile"><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+    
+          <li class="menu-button" onclick="showSidebar()">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="36" width="36" viewBox="0 96 960 960" width="26">
+                    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+                </svg>
+            </a>
+        </li>
+            </ul>
+      </nav>
+
+    <section class="parallax">
+ 
+
+        <div class="parallax-background" style="background-image: url('{% static 'assets/images/library.jpeg' %}');">
+            <div class="parallax-content">
+                <h2>Scopri Le meraviglie Di sunrise inn</h2>
+                <p>Esplora l'ambiente sereno e immergiti nella tranquillità della natura.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <div class="explain">
+        <div class="title-center">
+             <div class="title2">
+            <h1>CHI SIAMO</h1>
+            
+          </div>
+        </div>
+
+
+
+        <div class="container2">
+            <div class="photo">
+                <img src="{% static 'assets/images/rouge.jpg' %}" class='logo' alt="rouge">
+
+            </div>
+
+            <div class="paragraph2">
+
+                <p>Sunrise Inn è situato a 900 mt di altezza nelle montagne delle valli di Lanzo, a Gisola, una delle borgate piu piccole del comune di Pessinetto, distante 8,2 km da Lanzo Torinese, 20 km dall’aeroporto internazionale di Caselle torinese, 40 km dal centro di Torino.
+
+                    Sunrise Inn è il B&B ideale per momenti rigeneranti, grazie ai suoi servizi di alta qualità..<br>Da Sunrise Inn Pessinetto, troverete sistemazioni con vista panoramica, un ampio e tranquillo giardino, una spa completa con sauna, bagno turco, doccia con idrogetti e cromoterapia e una poltrona massaggi. Potrete godere di un idromassaggio esterno per rilassarvi sia in estate che in inverno, ammirando il paesaggio innevato e il cielo stellato. La struttura offre inoltre, due zone solarium con una vista mozzafiato sulle montagne ed una palestra attrezzata.</p>
+
+            </div>
+          
+        </div>
+      </div>
+
+      <section class="interactive-map">
+        <iframe src="https://www.google.com/maps/embed?pb=...your-embed-code-here..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    
+      
+    <footer>
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>Sunrise Inn B&B</h1>
+                </div>
+                <div class="address-section" style="color: white;">
+                    <p>Torino . LANZO Frazione Gisola 27/C . 10070 Pessinetto (TO)</p>
+                    <p>Tel : +39 331 126 8529</p>
+                    <p style="margin-top: 1px;">gmail : info@sunriseinn.it</p>
+                    <a href="{% url 'HOMEPAGE' %}">
+                        <img src="{% static 'assets/images/logo_sunriseinn.png' %}" class='logo-footer' alt="Sunrise Inn Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>FOLLOW US ON SOCIAL MEDIA</h1>
+                </div>
+                <div>
+                    <p style="color: rgb(255, 255, 255); margin-bottom: 10px;">
+                        Seguici sui social media per scoprire le nuove offerte e trovare ulteriori informazioni:
+                    </p>
+                </div>
+                <div class="icons-socialmedia">
+                    <a href="https://www.instagram.com/sunriseinnhotel/">Instagram</a>
+                    <a href="https://www.facebook.com/sunriseinnhotel">Facebook</a>
+                </div>
+                <div class="footer-links">
+                    <a href="#contact">Contact Us</a> |
+                    <a href="{%url 'SERVIZI' %}">About Us</a> |
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="content-footer">
+                <div class="logo-section">
+                    <h1>Iscrivetevi</h1>
+                </div>
+                <div class="newsletter-form">
+                    <p>ISCRIVITI PER OFFERTE SPECIALI</p>
+                    <form class="form" method="post">
+                        {% csrf_token %}
+                        <label style='margin-top: 15px;' for="email">Email:</label>
+                        <input required placeholder="Enter your email address" name="email" id="email" type="email">
+                        <input value="Iscrivetevi" type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Privacy Policy Modal -->
+        <div id="privacy-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Informativa sulla Privacy</h2>
+                <p>
+                    Per avere informazioni circa i tuoi dati personali raccolti, le finalità ed i soggetti con cui i dati vengono condivisi, contatta il Titolare.</p>
+            </div>
+        </div>
+
+
+
+            <div id="contact-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Contact Us</h2>
+                    <p>Phone: +39 331 126 8529</p>
+                    <p>Email: info@sunriseinn.it</p>
+                </div>
+            </div>
+        </footer>
+        
+    
+    
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    // Get the modal
+    var modal = document.getElementById("privacy-modal");
+
+    // Get the link that opens the modal
+    var privacyLink = document.querySelector('a[href="#privacy"]');
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the link, open the modal
+    privacyLink.onclick = function() {
+        modal.style.display = "block";
+        return false; // Prevent default link behavior
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Get the modals
+    var privacyModal = document.getElementById("privacy-modal");
+    var contactModal = document.getElementById("contact-modal");
+
+    // Get the links that open the modals
+    var privacyLink = document.querySelector('a[href="#privacy"]');
+    var contactLink = document.querySelector('a[href="#contact"]');
+
+    // Get the <span> elements that close the modals
+    var closeButtons = document.getElementsByClassName("close");
+
+    // When the user clicks on a link, open the corresponding modal
+    privacyLink.onclick = function() {
+        privacyModal.style.display = "block";
+        return false; // Prevent default link behavior
+    }
+
+    contactLink.onclick = function() {
+        contactModal.style.display = "block";
+        return false; // Prevent default link behavior
+    }
+
+    // When the user clicks on a close button, close the corresponding modal
+    for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].onclick = function() {
+            privacyModal.style.display = "none";
+            contactModal.style.display = "none";
+        }
+    }
+
+    // When the user clicks anywhere outside of a modal, close it
+    window.onclick = function(event) {
+        if (event.target == privacyModal || event.target == contactModal) {
+            privacyModal.style.display = "none";
+            contactModal.style.display = "none";
+        }
+    }
+});
+
+
+
+</script>
+
+
+
+    
+
+</body>
+</html>

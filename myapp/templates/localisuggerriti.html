@@ -1,0 +1,650 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escursione | Sunrise Inn B&B</title>
+
+
+    <link href="{%static 'assets/images/logo_sunriseinn.png'%}" rel="icon">
+    <link rel="stylesheet" href="{%static 'assets/css/footer.css'%}">    
+    <link rel="stylesheet" href="{%static 'assets/css/hotel-restaurant.css'%}">    
+    <link rel="stylesheet" href="{%static 'assets/css/navbar1.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="{% static 'assets/js/navbar.js' %}?{% now 'U' %}"></script>
+
+    <style>
+
+.biketour {
+  background-image: url("{% static 'assets/places-to-visit/fruehling-e-bike-soell-mathaeusgartner.332.jpg' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+#about{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+}
+
+@media screen and (max-width: 768px) {
+  .biketour {
+    height: 600px;
+  }
+}
+
+.container2{
+    box-shadow:none;
+    margin-bottom: 100px;
+}
+
+    </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+      <li><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+      <li><a href="{%url 'SERVIZI'%}">servizi</a></li>
+      <li><a href="{%url 'GARDEN'%}">Garden</a></li>
+      <li><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+
+
+    </ul>
+    <ul>
+      <li><a href="#"><img src="{%static 'assets/images/logo_sunriseinn.png'%}" class="logo"></a></li>
+      <li class="hideOnMobile"><a href="{% url 'HOMEPAGE' %}">Pagina principale</a></li>
+      <li class="hideOnMobile"><a href="{% url 'ABOUT' %}">Chi siamo</a></li>
+      <li class="hideOnMobile"><a href="{%url 'GARDEN'%}">Garden</a></li>
+
+      <li class="hideOnMobile"><a href="{%url 'SERVIZI'%}">servizi</a></li>
+      <li class="hideOnMobile"><a href="{%url 'LOCALLI'%}">Escursioni</a></li>
+
+      <li class="menu-button" onclick="showSidebar()">
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="36" width="36" viewBox="0 96 960 960" width="26">
+                <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+            </svg>
+        </a>
+    </li>
+        </ul>
+  </nav>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="title">
+                    <h2 style="font-size: 50px;">
+                        Escursioni
+                        </h2>
+                </div>
+                <div class="about-content">
+                    <div>
+                        <p>PRESO IL NOSTRO HOTEL, TROVERAI UNA VARIETÀ DI ATTIVITÀ ENTUSIASMANTI PER RENDERE OGNI MOMENTO DEL TUO SOGGIORNO INDIMENTICABILE. SCOPRI LE NOSTRE PROPOSTE E VIVI ESPERIENZE STRAORDINARIE CHE ARRICCHIRANNO IL TUO SOGGIORNO CON MOMENTI INDIMENTICABILI E DIVERTENTI.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurant-section">
+            <div class="restaurant">
+                <div class="container2">
+                    <div class="image"><img src="{%static 'assets/places-to-visit/escursione-1.jpg'%}">
+                    </div>
+                    <div class="paragraph">
+                        <h1>
+                          La Val Granda                           </h1>
+
+                        <p>Confina con la Valle Orco, che si trova a nord ma con cui non ci sono strade di collegamento e la Val d’Ala, la seconda delle Valli di Lanzo. Questa piccola valle nelle valli, lunga solo 17 km, è ricca di esperienze da fare, soprattutto a contatto con la natura.</p>
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <div class="paragraph">
+                        <h1>
+
+                          Lanzo Torinese
+                          'L Circul
+                            </h1>
+
+                        <p>Lanzo Torinese è una cittadina con circa 5000 abitanti che vede un po’ nel suo Ponte del Diavolo il suo simbolo principale. Sono tantissime le cose da non perdere qui, come la Casa dei Ceci, la Torre Civica che ospita la biblioteca comunale e il Museo etnografico dell’arte popolare tessile lanzese.​ Il Comitato del Ponte del Diavolo organizza visite guidate tematiche a Lanzo Torinese e dintorni e risponderà alle vostre curiosità</p>
+                    </div>                    <div class="image">                    <div class="image"><img src="{%static 'assets/places-to-visit/lanzo.jpg'%}">
+                    </div></div>
+                </div>
+
+                <div class="container2">
+                    <div class="image"><img src="{%static 'assets/places-to-visit/santuario.jpg'%}">
+                    </div>
+                    <div class="paragraph">
+                        <h1>
+                            
+
+                          Santuario di Forno
+
+                            </h1>
+
+                        <p>
+
+
+                 
+
+Il Santuario di Nostra Signora di Loreto si trova a Forno Alpi Graie, ultimo abitato della Val Grande e buon punto di partenza per numerose escursioni alpine nei dintorni. Il Santuario sorge all’imbocco del Vallone di Sea e la sua costruzione venne completata a fine Ottocento, nel 1869.
+
+Se pensate che fare i 444 scalini a piedi per raggiungerlo sia sfiancante, sappiate che un tempo i pellegrini li percorrevano in ginocchio.
+
+                          </p>
+                    </div>
+                </div>
+
+                <div class="container2">
+                    <div class="paragraph">
+                        <h1>
+                            
+                          Parapendio
+                            </h1>
+
+                        <p>
+
+
+                          Se cullate da sempre il sogno di volare, il parapendio è il modo per realizzarlo. Ѐ sufficiente una corsa e la voglia di lanciarsi staccando i piedi da terra.
+
+                          Potete farlo grazie alla scuola di volo in parapendio Peter Pan, fondata a Torino nel 1986 con voli organizzati proprio in Piemonte a Chialamberto, in Val Grande. Potete decidere di fare il corso base per iniziare, per imparare manovre fondamentali di decollo e atterraggio e godervi il vostro volo, oppure potete decidere di affidarvi a un’esperienza di parapendio biposto, con piloti già brevettati che portano un passeggero.
+                          </p>
+                    </div>                    <div class="image">                    <div class="image"><img src="{%static 'assets/places-to-visit/scuolapeterpan.jpg'%}">
+                    </div></div>
+                </div>
+
+
+                <div class="container2">
+                    <div class="image"><img src="{%static 'assets/places-to-visit/pista-di-fondo-dellalta-val-grande-2.jpg'%}">
+                    </div>
+                    <div class="paragraph">
+                        <h1>
+        
+
+                          Pista di fondo dell'alta val grande
+                        </h1>
+
+                        <p>
+
+                          Se siete amanti degli sport invernali con la stagione fredda potete mettere gli sci di fondo ai piedi e lanciarvi alla scoperta di questo bellissimo e stancante sport.
+                          
+                          La pista di sci di fondo della Val Grande è un comprensorio di 30 km e collega tutti i villaggi dell’alta Val Grande da Chialamberto a Forno Alpi Graie. Il giornaliero costa 5 euro e potrete sbizzarrirvi tra boschi e paesaggi ammantati.
+                          </p>
+                    </div>
+                </div>
+
+                <div class="container2">
+
+                  <div class="paragraph">
+                      <h1>
+      
+
+
+                        Il borgo di vrù
+                      </h1>
+
+                      <p>
+
+                        Vrù è un piccolo e grazioso borgo montano, famoso per il bellissimo presepe meccanico creato da Francesco Berta, soprannominato Chichin, un abitante del borgo molto amato che ha iniziato a costruire una per una le statuine del presepe, prima di tutto per rendere felici i suoi figli. Il presepe è tenuto in vita dal cognato di Chichin e continuamente abbellito con nuove statuine del presepe, oggi visitabile e aperto su richiesta e tutti i weekend.
+                        
+                        Le ragazze e le signore dell’Associazione culturale Francesco Berta hanno creato un percorso
+                        guidato che permette ai visitatori di riscoprire la borgata, ogni anno incentrato su un tema
+                        differente.
+                        
+                        Se visitate Vrù non potete perdervi, dopo una passeggiata in salita poco fuori dalla borgata, la Mole Antonelliana e la Torre di Pisa, anch’esse progettate e costruite da Chichin.
+                        </p>
+                  </div>
+
+                  <div class="image"><img src="{%static 'assets/places-to-visit/IL-BORGO-DI-VRU.jpg'%}">
+                  </div>
+              </div>
+
+              <div class="container2">
+                <div class="image"><img src="{%static 'assets/places-to-visit/lago-di-monastero.jpg'%}">
+                </div>
+                <div class="paragraph">
+                    <h1>
+    
+
+
+                      lago di monastero
+                    </h1>
+
+                    <p>
+
+                      Il Lago di Monastero è un gioiello incastonato tra verdi colline e distese di alberi secolari. Le sue acque placide riflettono il cielo e creano un’atmosfera di calma e serenità. Rappresenta una fuga perfetta dalla vita frenetica, offrendo un luogo dove potersi immergere nella natura incontaminata.
+                      
+                      Le sue rive sono ideali per rilassanti passeggiate, consentendo agli ospiti di godere della fresca brezza e del canto degli uccelli. 
+                      </p>
+                </div>
+            </div>
+
+            <div class="container2">
+
+              <div class="paragraph">
+                  <h1>
+  
+
+
+                    
+Baite del Pianas
+
+                  </h1>
+
+                  <p>
+
+                   
+
+Nel suggestivo scenario della Valle di Lanzo, le Baite del Pianas emergono come un’accogliente oasi di montagna. Questi rifugi rustici, immersi nella natura incontaminata, offrono un rifugio accogliente e autentico per gli amanti della tranquillità e dell’avventura.
+
+Circondati da maestose vette e boschi secolari, le Baite del Pianas rappresentano il punto di partenza ideale per esplorare sentieri panoramici, praticare attività all’aria aperta e godere di panorami mozzafiato.
+
+Che siate in cerca di relax o di avventure montane, queste baite vi accolgono con la loro atmosfera suggestiva e autentica.
+</p>
+              </div>
+
+              <div class="image"><img src="{%static 'assets/places-to-visit/baitedelpianas.jpg'%}">
+              </div>
+          </div>
+                
+          <div class="container2">
+            <div class="image"><img src="{%static 'assets/places-to-visit/montemomello.jpg'%}">
+            </div>
+            <div class="paragraph">
+                <h1>
+
+
+
+                  
+Monte Momello
+
+                </h1>
+
+                <p>
+
+
+                  Nel cuore della splendida Valle di Lanzo, il Monte Momello si erge maestoso come un’icona di bellezza naturale.
+
+                  Questa imponente vetta offre agli escursionisti un’opportunità unica di sfidare se stessi e di immergersi nella maestosità delle Alpi.
+                  
+                  Con i suoi panorami panoramici che si estendono su valli verdi e picchi circostanti, il Monte Momello regala una vista mozzafiato che ricompensa l’ardua salita.
+                  
+                  Sia che cerchiate una sfida escursionistica o un’esperienza visiva indimenticabile, il Monte Momello è pronto ad accogliervi con la sua bellezza incontaminata.
+                  </p>
+            </div>
+        </div>
+
+        <div class="container2">
+
+          <div class="paragraph">
+              <h1>
+
+
+
+                
+
+                lago di malciaussia
+
+              </h1>
+
+              <p>
+
+ 
+
+Il Lago di Malciaussia brilla come un gioiello di serenità tra le montagne. Questo incantevole specchio d’acqua, incastonato in un paesaggio naturale incontaminato, offre una fuga tranquilla dalla vita quotidiana.
+
+Le sue acque calme riflettono la maestosità delle cime circostanti, creando un’atmosfera di pace e bellezza.
+
+Il Lago di Malciaussia è un rifugio per gli amanti della natura e degli sport all’aria aperta. I sentieri che lo circondano conducono ad avventure escursionistiche e vedute panoramiche mozzafiato. È anche un luogo perfetto per il relax, il pic-nic e la pesca. L’atmosfera magica del lago, che cambia con le stagioni, affascina i visitatori e crea un’esperienza unica in ogni momento dell’anno.
+
+Che siate in cerca di contemplazione o di attività all’aperto, il Lago di Malciaussia vi accoglie con la sua bellezza incantevole.
+</p>
+          </div>
+
+          <div class="image"><img src="{%static 'assets/places-to-visit/laghidilanzo.jpg'%}">
+          </div>
+      </div>
+
+      <div class="container2">
+        <div class="image"><img src="{%static 'assets/places-to-visit/santuario_santa_cristina.jpg'%}">
+        </div>
+        <div class="paragraph">
+            <h1>
+
+
+
+              
+
+              Santuario Santa Cristina
+            </h1>
+
+            <p>
+
+
+              Nelle incantevoli Valli di Lanzo si erge il suggestivo Santuario di Santa Cristina, un luogo intriso di spiritualità e storia.
+
+              Questo antico santuario, avvolto dalla serenità delle montagne circostanti, offre un rifugio per pellegrini e visitatori in cerca di riflessione. La sua architettura affascinante e l’atmosfera tranquilla creano un luogo di pace e devozione.
+              
+              Immerso nella natura rigogliosa, il Santuario di Santa Cristina invita a momenti di contemplazione e connessione interiore, offrendo un’esperienza autentica tra fede e bellezza paesaggistica.
+              
+              Che siate interessati alla storia religiosa o alla semplice bellezza del luogo, il Santuario di Santa Cristina vi accoglie con le sue porte aperte e la sua aura di sacralità.
+              </p>
+        </div>
+    </div>
+
+    <div class="container2">
+
+      <div class="paragraph">
+          <h1>
+
+
+
+            
+
+
+            Ala di Stura Ski
+
+          </h1>
+
+          <p>
+
+
+            Un piccolo villaggio incastonato tra le grandi montagne di una delle Valli di Lanzo, la culla dell’alpinismo piemontese.
+
+            Impianti per risalire verso Punta Karfen e scendere con gli sci e tante altre possibilità con ciaspole, pelli di foca e pattini.
+            
+            La ski area raggiungibile solo a piedi o in seggiovia, lontano dai rumori e dalle auto.
+            Innevamento programmato, scuola di sci, noleggio, tapis roullant, percorsi in salita per sci alpinisti con possibilità di discesa in pista, percorsi per ciaspole, cucina tipica con prodotti locali.
+            
+            Area giochi bimbi interna al rifugio unica in Piemonte, parco giochi sulla neve, area bob e slittini.
+            
+</p>
+      </div>
+
+      <div class="image"><img src="{%static 'assets/places-to-visit/ALAdiSTURA_pista_sci-768x768.jpg'%}">
+      </div>
+  </div>
+
+  <div class="container2">
+    <div class="image"><img src="{%static 'assets/places-to-visit/balme-768x768.jpg'%}">
+    </div>
+    <div class="paragraph">
+        <h1>
+
+
+
+          
+
+
+          borgo di Balme
+        </h1>
+
+        <p>
+
+
+          Nelle incantevoli Valli di Lanzo si erge il suggestivo Santuario di Santa Cristina, un luogo intriso di spiritualità e storia.
+
+          Questo antico santuario, avvolto dalla serenità delle montagne circostanti, offre un rifugio per pellegrini e visitatori in cerca di riflessione. La sua architettura affascinante e l’atmosfera tranquilla creano un luogo di pace e devozione.
+          
+          Immerso nella natura rigogliosa, il Santuario di Santa Cristina invita a momenti di contemplazione e connessione interiore, offrendo un’esperienza autentica tra fede e bellezza paesaggistica.
+          
+          Che siate interessati alla storia religiosa o alla semplice bellezza del luogo, il Santuario di Santa Cristina vi accoglie con le sue porte aperte e la sua aura di sacralità.
+          </p>
+    </div>
+</div>
+
+<div class="container2">
+
+  <div class="paragraph">
+      <h1>
+
+
+
+        
+
+
+
+        lago D'Unghiasse
+
+      </h1>
+
+      <p>
+
+        l Lago d’Unghiasse brilla come una gemma nascosta tra le montagne. Questo incantevole specchio d’acqua, circondato da una natura incontaminata, offre un rifugio di tranquillità e bellezza paesaggistica. I suoi riflessi catturano il cielo e le maestose vette circostanti, creando un’atmosfera di serenità.
+
+        Il Lago d’Unghiasse è il luogo ideale per immergersi nella natura, con sentieri che si snodano lungo le sue rive e offrono viste panoramiche mozzafiato. Se siete appassionati di attività all’aperto, potrete godere di escursioni, pic-nic e momenti di relax in un contesto alpino unico.
+        
+        Che siate in cerca di pace interiore o di avventura all’aperto, il Lago d’Unghiasse vi attende con la sua bellezza silenziosa e affascinante.
+    
+</p>
+  </div>
+
+  <div class="image"><img src="{%static 'assets/places-to-visit/laghi-DUnghiasse-768x768.jpg'%}">
+  </div>
+</div>
+
+<div class="container2">
+  <div class="image"><img src="{%static 'assets/places-to-visit/laghi-di-sagnasse-768x768.jpg'%}">
+  </div>
+  <div class="paragraph">
+      <h1>
+
+
+
+        
+
+
+
+        laghi di sagnasse
+      </h1>
+
+      <p>
+        
+
+I Laghi di Sagnasse si ergono come gioielli naturali tra le montagne. Questi specchi d’acqua, circondati da uno scenario incontaminato, offrono una fuga rilassante e suggestiva. Le loro acque riflettono la maestosità delle vette circostanti, creando un’atmosfera di pace e bellezza.
+
+I Laghi di Sagnasse sono un richiamo per gli amanti della natura e gli escursionisti. Sentieri panoramici conducono a viste mozzafiato e momenti di tranquillità. 
+
+Che siate in cerca di avventura o di momenti di contemplazione, i Laghi di Sagnasse vi accolgono con la loro bellezza naturale senza tempo.
+
+</p>
+  </div>
+</div>
+
+<div class="container2">
+
+  <div class="paragraph">
+      <h1>
+
+
+
+        
+
+
+
+
+        punta delle serene
+
+      </h1>
+
+      <p>
+
+       
+
+Questa maestosa cima, avvolta dalla bellezza naturale, offre una sfida e una gratificazione uniche agli escursionisti. Con panorami che abbracciano le valli e le vette circostanti, la Punta delle Serene regala una vista mozzafiato che ricompensa l’ascesa.
+
+L’escursione verso la Punta delle Serene è un’opportunità per abbracciare la natura e testare le proprie abilità. Gli itinerari escursionistici attraversano paesaggi variegati, arricchendo l’esperienza con la diversità dell’ambiente.
+
+Che siate in cerca di avventura o di una connessione profonda con la natura, la Punta delle Serene vi attende con la sua sfida e la sua bellezza ineguagliabile.
+
+</p>
+  </div>
+
+  <div class="image"><img src="{%static 'assets/places-to-visit/punta-delle-serene-768x768.jpg'%}">
+  </div>
+</div>
+
+<div class="container2">
+  <div class="image"><img src="{%static 'assets/places-to-visit/lago-della-rossa-768x768.jpg'%}">
+  </div>
+  <div class="paragraph">
+      <h1>
+
+
+
+        
+
+
+
+
+        lago della rossa
+      </h1>
+
+      <p>
+        
+
+Il Lago della Rossa brilla come una gemma nascosta tra le montagne. Questo pittoresco specchio d’acqua, circondato dalla bellezza naturale, offre un rifugio di serenità e meraviglia. Le sue acque riflettono i maestosi paesaggi circostanti, creando un’atmosfera di pace e incanto.
+
+Il Lago della Rossa è un luogo amato dagli amanti della natura e degli appassionati di escursioni. Sentieri panoramici conducono a viste spettacolari e momenti di tranquillità. È un luogo ideale per chi desidera una fuga dalla routine quotidiana o per chi cerca una connessione autentica con la natura.
+
+Che siate alla ricerca di avventura o di contemplazione, il Lago della Rossa vi accoglie con la sua bellezza naturale senza tempo.
+</p>
+  </div>
+</div>
+
+<div class="container2">
+
+  <div class="paragraph">
+      <h1>
+
+        Reggia di Venaria
+
+     </h1>
+
+      <p>
+
+        La Reggia di Venaria, a breve distanza da Gisola, è un’escursione imperdibile per gli amanti dell’arte e della storia. Questo maestoso esempio di architettura barocca, ex residenza dei Savoia, vanta giardini incantevoli e interni regali. I visitatori possono immergersi nella bellezza dei suoi affreschi, opere d’arte, e nell’eleganza dei suoi giardini, rendendo la visita alla Reggia un’esperienza culturale unica e indimenticabile.
+</p>
+  </div>
+
+  <div class="image"><img src="{%static 'assets/places-to-visit/venaria.png'%}">
+  </div>
+</div>
+
+
+                
+
+            </div>
+
+
+
+
+        </section>
+
+        <div class="biketour">
+          <div class="paragraph4">
+            <p>KOM offre la possibilità di noleggiare diverse tipologie di biciclette, prevalentemente a pedalata assistita. E se non vorrete più dividervi della vostra compagna di avventura noleggiata potrete acquistarla, durante o al termine del periodo di noleggio. Sono inoltre disponibili biciclette per bambini, seggiolini e carrettini bici</p>
+          </div>
+          <div class="button-container">
+            <a href="{%url 'BIKETOUR'%}"><button>SEE TOURS</button></a>
+          </div>
+        </div>
+        
+
+
+        <footer>
+          <div class="footer">
+              <div class="content-footer">
+                  <div class="logo-section">
+                      <h1>Sunrise Inn B&B</h1>
+                  </div>
+                  <div class="address-section" style="color: white;">
+                      <p>Torino . LANZO Frazione Gisola 27/C . 10070 Pessinetto (TO)</p>
+                      <p style="color: white;">Tel : 39 331 126 8529</p>
+                      <p style="margin-top: 1px;">gmail : info@sunriseinn.it</p>
+                      <a href="{% url 'HOMEPAGE' %}">
+                          <img src="{% static 'assets/images/logo_sunriseinn.png' %}" class='logo-footer' alt="Sunrise Inn Logo">
+                      </a>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="footer">
+              <div class="content-footer">
+                  <div class="logo-section">
+                      <h1>FOLLOW US ON SOCIAL MEDIA</h1>
+                  </div>
+                  <div>
+                      <p style="color: rgb(255, 255, 255); margin-bottom: 10px;">
+                          Seguici sui social media per scoprire le nuove offerte e trovare ulteriori informazioni:
+                      </p>
+                  </div>
+                  <div class="icons-socialmedia">
+                      <a href="https://www.instagram.com/sunriseinnhotel/">Instagram</a>
+                      <a href="https://www.facebook.com/sunriseinnhotel">Facebook</a>
+                  </div>
+                  <div class="footer-links">
+                      <a href="#contact">Contact Us</a> |
+                      <a href="{%url 'SERVIZI' %}">About Us</a> |
+                      <a href="#privacy">Privacy Policy</a>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="footer">
+              <div class="content-footer">
+                  <div class="logo-section">
+                      <h1>Iscrivetevi</h1>
+                  </div>
+                  <div class="newsletter-form">
+                      <p>ISCRIVITI PER OFFERTE SPECIALI</p>
+                      <form class="form" method="post">
+                          {% csrf_token %}
+                          <label style='margin-top: 15px;' for="email">Email:</label>
+                          <input required placeholder="Enter your email address" name="email" id="email" type="email">
+                          <input value="Iscrivetevi" type="submit">
+                      </form>
+                  </div>
+              </div>
+          </div>
+      
+          <!-- Privacy Policy Modal -->
+          <div id="privacy-modal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Informativa sulla Privacy</h2>
+                  <p>
+                      Per avere informazioni circa i tuoi dati personali raccolti, le finalità ed i soggetti con cui i dati vengono condivisi, contatta il Titolare.</p>
+              </div>
+          </div>
+  
+  
+  
+              <div id="contact-modal" class="modal">
+                  <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <h2>Contact Us</h2>
+                      <p>Phone: +39 331 126 8529</p>
+                      <p>Email: info@sunriseinn.it</p>
+                  </div>
+              </div>
+          </footer>
+
+</body>
+
+</html>
